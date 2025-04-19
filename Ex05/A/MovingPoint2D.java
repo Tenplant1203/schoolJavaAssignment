@@ -3,8 +3,7 @@ public class MovingPoint2D extends Point2D {
   private double vy;
 
   public MovingPoint2D(double x, double y, double vx, double vy) {
-    setX(x);
-    setY(y);
+    super(x, y);
     this.vx = vx;
     this.vy = vy;
   }
