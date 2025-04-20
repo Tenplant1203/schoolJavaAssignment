@@ -4,9 +4,7 @@ public class MovingPoint2D {
   private double vy;
 
   public MovingPoint2D(double x, double y, double vx, double vy) {
-    this.point = new Point2D();
-    this.point.setX(x);
-    this.point.setY(y);
+    this.point = new Point2D(x, y);
     this.vx = vx;
     this.vy = vy;
   }
