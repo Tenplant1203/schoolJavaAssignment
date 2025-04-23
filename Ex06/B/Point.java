@@ -1,21 +1,19 @@
-class Quadrangle /* your code */ {
-  protected Point[] P;
+class Point {
+  private int x;
+  private int y;
 
-  public Quadrangle(Point p1, Point p2, Point p3, Point p4) {
-    /*
-     * your code
-     */
-  }
-
-  public void print() {
-    /*
-     * your code
-     */
+  public Point(int x, int y) {
+    this.x = x;
+    this.y = y;
   }
 
   public void move(int dx, int dy) {
-    /*
-     * your code
-     */
+    this.x += dx;
+    this.y += dy;
+  }
+
+  @Override
+  public String toString() {
+    return "(" + this.x + ", " + this.y + ")";
   }
 }
