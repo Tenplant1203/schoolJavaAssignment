@@ -9,6 +9,7 @@ class Quadrangle extends Shape {
     P[3] = p4;
   }
 
+  @Override
   public void print() {
     super.print();
     for (int i = 0; i < 4; i++) {
@@ -20,6 +21,7 @@ class Quadrangle extends Shape {
     System.out.println();
   }
 
+  @Override
   public void move(int dx, int dy) {
     for (Point point : P) {
       point.move(dx, dy);
