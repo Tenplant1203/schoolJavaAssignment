@@ -1,5 +1,5 @@
 public class Tree {
   public Tree() {
-    System.err.println("Tree");
+    System.out.println("Tree");
   }
 }
