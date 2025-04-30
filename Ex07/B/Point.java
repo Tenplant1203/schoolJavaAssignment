@@ -22,6 +22,7 @@ public class Point implements Relatable {
     return false;
   }
 
+  @Override
   public double length() {
     return Math.sqrt(x * x + y * y);
   }
