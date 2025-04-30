@@ -1,10 +1,19 @@
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class SortingMachine {
-  public void sort(Point[] points) {
-    Arrays.sort(points, Comparator
-        .comparing(Point::getX)
-        .thenComparing(Point::getY));
+  public void sort(Relatable[] items) {
+    // import java.util.Comparator;
+    // Arrays.sort(points, Comparator
+    // .comparing(Point::getX)
+    // .thenComparing(Point::getY));
+
+    Arrays.sort(items, (r1, r2) -> {
+      if (r1.isSmallerThan(r2))
+        return -1;
+      else if (r2.isSmallerThan(r1))
+        return 1;
+      else
+        return 0;
+    });
   }
 }

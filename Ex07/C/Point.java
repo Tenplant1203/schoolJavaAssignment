@@ -15,19 +15,16 @@ public class Point implements Relatable {
     return y;
   }
 
+  @Override
   public boolean isSmallerThan(Relatable other) {
-    if (this.length() < other.length()) {
-      return true;
+    Point p = (Point) other;
+    if (this.x != p.x) {
+      return this.x < p.x;
     }
-    return false;
+    return this.x < p.y;
   }
 
   public void print() {
     System.out.printf("(%d, %d)\n", x, y);
-  }
-
-  @Override
-  public double length() {
-    return Math.sqrt(x * x + y * y);
   }
 }
