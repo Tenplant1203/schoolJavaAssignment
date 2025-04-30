@@ -1,6 +1,6 @@
 public class Point implements Relatable {
-  private int x;
-  private int y;
+  private final int x;
+  private final int y;
 
   public Point(int x, int y) {
     this.x = x;
@@ -15,15 +15,12 @@ public class Point implements Relatable {
     return y;
   }
 
-  public boolean isSmallerThan(Relatable other) {
-    if (this.length() < other.length()) {
-      return true;
-    }
-    return false;
-  }
-
   @Override
-  public double length() {
-    return Math.sqrt(x * x + y * y);
+  public boolean isSmallerThan(Relatable other) {
+    Point p = (Point) other;
+    if (this.x != p.x) {
+      return this.x < p.x;
+    }
+    return this.x < p.y;
   }
 }
