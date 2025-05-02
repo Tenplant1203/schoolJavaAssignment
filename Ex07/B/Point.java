@@ -21,6 +21,6 @@ public class Point implements Relatable {
     if (this.x != p.x) {
       return this.x < p.x;
     }
-    return this.x < p.y;
+    return this.y < p.y;
   }
 }
