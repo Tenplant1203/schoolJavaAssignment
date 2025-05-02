@@ -1,6 +1,9 @@
 import java.util.Arrays;
 
 public class SortingMachine {
+  public SortingMachine() {
+  }
+
   public void sort(Relatable[] items) {
     // import java.util.Comparator;
     // Arrays.sort(points, Comparator
