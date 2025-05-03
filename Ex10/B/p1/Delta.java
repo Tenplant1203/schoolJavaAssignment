@@ -1,7 +1,7 @@
 package B.p1;
 
-import B.Alpha;
-import B.Gamma;
+import B.p2.Alpha;
+import B.p2.Gamma;
 
 public class Delta {
   Alpha alpha = new Alpha();

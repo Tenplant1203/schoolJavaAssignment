@@ -1,4 +1,4 @@
-package B;
+package B.p2;
 
 public class Gamma {
   public int v = 1000;

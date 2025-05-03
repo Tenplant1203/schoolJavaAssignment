@@ -1,4 +1,4 @@
-package B;
+package B.p2;
 
 public class Alpha {
   protected int u = 30;
