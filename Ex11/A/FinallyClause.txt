@@ -1,0 +1,84 @@
+## 1. Why does the program print the two lines below?
+
+---
+
+(2) Exception occurred
+(2) in finally clause
+
+### A.
+
+---
+
+流れ: try(例外) → catch → finally
+
+[1] Exceptionが2回目のループでthrowされる
+
+```java
+if (++count == 2)
+throw new Exception();
+```
+
+[2] catchでExceptionを受け取る
+
+```java
+catch (Exception e) {
+	System.out.println("(" + count + ") Exception occurred");
+}
+```
+
+ここで(2) Exception occurredが出力される
+
+[3]finallyが実行される
+
+```java
+finally {
+	System.out.println("(" + count + ") in finally clause");
+}
+```
+
+ここで(2) in finally clauseが出力される
+
+## 2. Why does the program print the line below (It looks like the program does not print the line because of the break statement)?
+
+---
+
+(3) in finally clause
+
+### A.
+
+---
+
+流れ: try(正常) → break → finally
+
+[1] tryで3回目のループがbreakされる
+
+```java
+if (count == 3)
+	break;
+```
+
+[2] finallyが実行される(breakされても, finallyは実行されるため)
+
+```java
+finally {
+	System.out.println("(" + count + ") in finally clause");
+}
+```
+
+## 3. Why does the program print the line below?
+
+---
+
+Main program ends.
+
+### A.
+
+---
+
+2で3回目のループがbreakされてwhileループを抜けたため
+
+```java
+System.out.println("Main program ends.");
+```
+
+が実行されてMain program ends.が出力された
