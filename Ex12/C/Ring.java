@@ -1,10 +1,16 @@
+import java.util.Scanner;
+
 public class Ring {
   public static void main(String[] args) {
-    String ringString = args[0] + args[0];
-    if (ringString.contains(args[1])) {
+    Scanner scanner = new Scanner(System.in);
+    String s = scanner.nextLine();
+    String p = scanner.nextLine();
+    String ringString = s + s;
+    if (ringString.contains(p)) {
       System.out.println("Yes");
     } else {
       System.out.println("No");
     }
+    scanner.close();
   }
 }
