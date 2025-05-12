@@ -1,50 +1,57 @@
-import java.util.ArrayDeque;
-
 public class DequeImplByDLL implements Deque {
-  private final java.util.Deque<Integer> deque;
+  private final SimpleDoublyLinkedList list;
+  private int n;
 
   public DequeImplByDLL() {
-    deque = new ArrayDeque<>();
+    this.list = new SimpleDoublyLinkedList();
+    this.n = 0;
   }
 
   @Override
   public void insertFront(int key) {
-    deque.addFirst(key);
-  };
+    list.addFront(key);
+    n++;
+  }
 
   @Override
   public void insertBack(int key) {
-    deque.addLast(key);
-  };
+    list.addBack(key);
+    n++;
+  }
 
   @Override
   public void removeFront() {
-    deque.removeFirst();
-  };
+    if (n > 0) {
+      list.removeFront();
+      n--;
+    }
+  }
 
   @Override
   public void removeBack() {
-    deque.removeLast();
-  };
+    if (n > 0) {
+      list.removeBack();
+      n--;
+    }
+  }
 
   @Override
   public int front() {
-    return deque.getFirst();
-  };
+    return list.front();
+  }
 
   @Override
   public int back() {
-    return deque.getLast();
-  };
+    return list.back();
+  }
 
   @Override
   public int size() {
-    return deque.size();
-  };
+    return n;
+  }
 
   @Override
   public boolean empty() {
-    return deque.isEmpty();
-  };
-
+    return n == 0;
+  }
 }
